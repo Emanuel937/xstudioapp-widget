@@ -1,0 +1,208 @@
+// ==============================
+// Import Sass color module
+// ==============================
+@use "sass:color";
+
+// ==============================
+// Variables
+// ==============================
+$widget-font: sans-serif;
+$white: #ffffff ; 
+$light-gray: #f1f1f7;
+$shadow-color: rgba(255, 255, 255, 0.2);
+$transition-fast: 0.3s;
+$transition-slow: 0.6s;
+$grid-gap: 5rem;
+$max-width: 56rem;
+$image-radius: 1.5rem;
+$image-height: 24rem;
+
+// ==============================
+// Main widget container xstudioapp
+// ==============================
+.-xstudioapp-widget-container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $widget-font;
+
+  .-xstudioapp-widget-testimonial-container {
+    width: 100%;
+    max-width: $max-width;
+    padding: 2rem;
+  }
+
+  .-xstudioapp-widget-testimonial-grid {
+    display: grid;
+    gap: $grid-gap;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .-xstudioapp-widget-image-container {
+    position: relative;
+    width: 100%;
+    height: $image-height;
+    perspective: 1000px;
+  }
+
+  .-xstudioapp-widget-testimonial-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $image-radius;
+    transition: all $transition-slow cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 10px 30px $shadow-color;
+  }
+
+  .-xstudioapp-widget-testimonial-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .-xstudioapp-widget-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $white;
+      margin-bottom: 0.25rem;
+    }
+
+    .-xstudioapp-widget-designation {
+      font-size: 0.875rem;
+      color: $white;
+      margin-bottom: 2rem;
+    }
+
+    .-xstudioapp-widget-quote {
+      font-size: 1.125rem;
+      color: $white;
+      line-height: 1.75;
+    }
+  }
+
+  .-xstudioapp-widget-arrow-buttons {
+    display: flex;
+    gap: 1rem;
+    padding-top: 3rem;
+
+    @media (min-width: 768px) {
+      padding-top: 0;
+    }
+
+    .-xstudioapp-widget-arrow-button {
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 10px;
+      background-color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color $transition-fast;
+
+      &:hover {
+        background: linear-gradient(
+          20deg,
+          color.scale($white, $lightness: 10%),
+          color.scale($white, $lightness: -10%)
+        );
+      }
+
+      svg {
+        width: 1.25rem;
+        height: 1.25rem;
+        fill: $light-gray;
+        transition: transform $transition-fast, fill $transition-fast;
+      }
+
+      &:hover svg {
+        fill: black;
+      }
+
+      &.-xstudioapp-widget-prev-button {
+        &:hover svg {
+          transform: rotate(-12deg);
+        }
+      }
+
+      &.-xstudioapp-widget-next-button {
+        &:hover svg {
+          transform: rotate(12deg);
+        }
+      }
+    }
+  }
+}
+
+// ==============================
+// Style 2: image navigation / layout
+// ==============================
+.style_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .leftSide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navigation {
+    margin-left: 40px;
+    button {
+      margin: 30px 0;
+      color: white;
+      height: 40px;
+      width: 40px;
+      border-radius: 100px;
+      max-width: 74px;
+      display: block;
+      padding: 0px;
+
+    }
+  }
+
+  .image-container {
+    transition: all 5s;
+  }
+
+  img {
+    height: 79px;
+    width: 79px;
+    border-radius: 50%;
+    display: block;
+
+    &.active {
+      margin-left: -35px;
+
+      &::after {
+        content: " hello";
+        padding: 3px;
+        color: green;
+      }
+    }
+  }
+
+  .active_section {
+    display: flex;
+    align-items: center;
+
+    span {
+      border-radius: 50%;
+      color: green;
+      background-color: green;
+      width: 10px;
+      height: 10px;
+      display: block;
+      margin-left: 10px;
+    }
+  }
+}
+ 
