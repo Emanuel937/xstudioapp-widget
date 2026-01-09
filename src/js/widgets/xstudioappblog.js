@@ -1,7 +1,7 @@
  jQuery(document).ready(function($){
 
   const xstudioapp_blog = ()=>{ 
-
+     //adding features branch
     const thumbnails = document.querySelectorAll('.thumbnail');
     const slides = document.querySelectorAll('.slide');
 
