@@ -1,5 +1,5 @@
  jQuery(document).ready(function($){
-
+  //running in elementor frontend and backend
   const xstudioapp_blog = ()=>{ 
 
     const thumbnails = document.querySelectorAll('.thumbnail');
