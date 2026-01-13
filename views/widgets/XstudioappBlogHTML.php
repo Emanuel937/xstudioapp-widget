@@ -1,15 +1,13 @@
 <?php
-$args = [
-    'post_type'      => 'post',
-    'posts_per_page' => 5,
-    'post_status'    => 'publish',
-];
+    $args = [
+        'post_type'      => 'post',
+        'posts_per_page' => 5,
+        'post_status'    => 'publish',
+    ];
 
-$query = new WP_Query($args);
+    $query = new WP_Query($args);
 ?>
-
 <div class="widget-posts">
-
     <?php if ($query->have_posts()) : ?>
         <div class="widget-slides">
             <?php $index = 0; ?>
@@ -42,7 +40,6 @@ $query = new WP_Query($args);
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
         </div>
-
         <div class="widget-thumbnails">
             <?php $query->rewind_posts(); $index = 0; ?>
             <?php while ($query->have_posts()) : $query->the_post(); $index++; ?>
@@ -57,5 +54,4 @@ $query = new WP_Query($args);
             <?php endwhile; wp_reset_postdata(); ?>
         </div>
     <?php endif; ?>
-
 </div>
