@@ -46,6 +46,19 @@ class ErrorMessage{
 }
 
 
+ public static function isWoocommerceInstalled(): bool
+{
+    if ( function_exists('WC') ) {
+     
+        return true;
+    }
+    if ( class_exists('WooCommerce') ) {
+        return true;
+    }
+
+    return false;
+}
+
 }
 
 ErrorMessage::showError();

@@ -1,7 +1,7 @@
-.widget-posts {
+.xsa_blog {
   .widget-slides {
     position: relative;
-    width: 100%;
+    width: 100%; 
   
  
     .slide {
@@ -24,11 +24,11 @@
 
       .slide-content {
         padding: 1rem;
-        background: #f9f9f9;
         border-radius: 8px;
         margin-top: 1rem;
         width:50%;
         min-width:50%;
+        padding-left:50px;
 
 
         h3 {
@@ -67,5 +67,12 @@
         opacity: 1;
       }
     }
+  }
+  .read_more{
+    color:white;
+    padding:20px;
+    background-color:black;
+    border-radius: 0;
+    margin-bottom: 20px;
   }
 }

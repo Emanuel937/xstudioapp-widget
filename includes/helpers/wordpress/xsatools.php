@@ -2,8 +2,9 @@
 
 class XSATools{
 
-    use Cart, Categories,Post;
+    use Cart, Categories, Post;
 }
 
-$xsa_tools = new XSATools();
-var_dump($xsa_tools->get_categories_by("category"));
+$xwoo = new XSATools();
+//$xwoo->get_cart_data();
+
