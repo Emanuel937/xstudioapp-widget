@@ -5,6 +5,7 @@ use XStudioApp\WidgetBase\Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Background;
+use Elementor\Group_Control_Box_Shadow;
 
 if (!defined('ABSPATH')) exit;
 
@@ -47,7 +48,7 @@ class XstudioappBlog extends Base {
 
         /**
          * ---------------------------------------------------------
-         * LEFT TAB  (IMAGE CONTAINER)
+         * LEFT TAB  (IMAGE CONTAINER) 
          * ---------------------------------------------------------
          */
         $this->start_controls_tab(
@@ -920,6 +921,14 @@ class XstudioappBlog extends Base {
             ],
         ]
     );
+    
+    $this->add_group_control(
+        Group_Control_Typography::get_type(),
+        [
+            'name'     => 'xsa_blog_read_more_typo',
+            'selector' => '{{WRAPPER}} .xsa_blog .read_more',
+        ]
+    );
 
 
     // ---------------------------------------------------------
@@ -997,6 +1006,18 @@ class XstudioappBlog extends Base {
             'selectors' => [
                 '{{WRAPPER}} .xsa_blog .read_more' => 'border-color: {{VALUE}};',
             ],
+        ]
+    );
+
+    // BOX SHADOW
+    // ---------------------------------------------------------
+
+    $this->add_group_control(
+        Group_Control_Box_Shadow::get_type(),
+        [
+            'name'     => 'xsa_blog_read_more_box_shadow',
+            'label'    => __('Box Shadow', 'xstudioapp'),
+            'selector' => '{{WRAPPER}} .xsa_blog .read_more',
         ]
     );
 

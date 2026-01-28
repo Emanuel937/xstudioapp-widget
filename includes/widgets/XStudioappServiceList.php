@@ -27,10 +27,6 @@ class XStudioappServiceList extends Base {
         return ['x_studioapp_leading'];
     }
 
-
-  
-
-
     protected function register_controls() {
         // Section: Content
         $this->start_controls_section(
@@ -111,6 +107,8 @@ class XStudioappServiceList extends Base {
       $this->end_controls_section();
 
       // adding style to title and description and border 
+      //------------------------------------------------
+      //------------------------------------------------ 
 
       $this->start_controls_section(
         'xstudioapp_service_list_style',

@@ -1,6 +1,6 @@
 <?php
-namespace XStudioApp\Widgets;
 
+namespace XStudioApp\Widgets;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use XStudioApp\WidgetBase\Base;
@@ -26,7 +26,8 @@ class XstudioappImageTextFill extends Base {
     }
 
     /**
-     * Register Elementor controls
+     * ------------------------------------
+     *    Register Elementor controls
      */
     protected function register_controls() {
 
@@ -82,7 +83,9 @@ class XstudioappImageTextFill extends Base {
 
         $this->end_controls_section();
 
-        // Style section
+        // Style section  -----------------------------------------
+        //  -------------------------------------------------------
+
         $this->start_controls_section(
             'xstudioapp_style_section',
             [
@@ -148,9 +151,5 @@ class XstudioappImageTextFill extends Base {
 
         $this->end_controls_section();
     }
-
-    /**
-     * Render widget on frontend
-     */
 
 }
