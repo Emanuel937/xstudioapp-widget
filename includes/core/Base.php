@@ -58,7 +58,7 @@ abstract class Base extends Widget_Base {
 
     public function createCssFile(){
 
-        if($this->needCss()){
+        if($this->needCSS()){
             $scss_file = strtolower($this->className) .'.' . 'scss' ;
             FastScripts::createFile( XSTUDIOAPP_PATH . 'src/scss/widgets/'  . $scss_file );
         }

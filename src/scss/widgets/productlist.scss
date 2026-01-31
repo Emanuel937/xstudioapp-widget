@@ -1,0 +1,145 @@
+.xsa-product-list-wrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+
+  &.xsa-has-slider {
+    // future slider-specific styles
+  }
+
+  .xsa-product-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    .xsa-tab-button {
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      background: #f2f2f2;
+      border-radius: 20px;
+      font-size: 13px;
+      transition: background 0.2s ease, color 0.2s ease;
+
+      &.active {
+        background: #111;
+        color: #fff;
+      }
+    }
+  }
+
+  .xsa-product-list {
+    &.xsa-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    &.xsa-slider {
+      // slider layout if needed
+      display: flex;
+      gap: 20px;
+      overflow: hidden;
+    }
+
+    .xsa-product-item {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+
+      .xsa-product-image {
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      .xsa-product-content {
+        padding: 16px;
+
+        .xsa-product-title {
+          font-size: 16px;
+          margin: 0 0 8px;
+
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+
+        .xsa-product-price {
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+
+        .xsa-product-meta {
+          // future meta styles (colors, sizes, etc.)
+        }
+
+        .xsa-product-actions {
+          .xsa-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: #111;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            transition: background 0.2s ease, transform 0.1s ease;
+
+            &:hover {
+              background: #000;
+              transform: translateY(-1px);
+            }
+          }
+        }
+      }
+    }
+  }
+ 
+  .xsa-slider-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 16px;
+     
+    button {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #ddd;
+      background: #fff;
+      cursor: pointer;
+      font-size: 12px;
+      transition: background 0.2s ease, border-color 0.2s ease;
+
+      &:hover {
+        background: #f5f5f5;
+        border-color: #ccc;
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 1024px) {
+  .xsa-product-list-wrapper {
+    .xsa-product-list {
+      &.xsa-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .xsa-product-list-wrapper {
+    .xsa-product-list {
+      &.xsa-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+    }
+  }
+}

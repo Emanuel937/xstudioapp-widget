@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) exit;
 class XstudioappBlog extends Base {
 
     public function get_name() {
-        return 'xstudioapp_blog_widget';
+        return 'xstudioapp_blog';
     }
 
     public function get_title() {

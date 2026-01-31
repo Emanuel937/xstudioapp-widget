@@ -1,0 +1,11 @@
+{
+  "version": "1.2.0",
+  "download_url": "https://x-studioapp.com/plugins/xstuidoapp-widget/xstudioapp-widget.zip",
+  "requires": "5.0",
+  "tested": "6.5",
+  "last_updated": "2026-01-29",
+  "sections": {
+    "description": "update_version.",
+    "changelog": "fixing the bug and make more securty"
+  }
+}

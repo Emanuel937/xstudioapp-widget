@@ -69,7 +69,7 @@ jQuery(document).ready(function ($) {
     // ELEMENTOR HOOK → RUN SCRIPT WHEN WIDGET IS LOADED
     // ---------------------------------------------------------
    if (typeof elementorFrontend !== 'undefined' && elementorFrontend.hooks) {
-        elementorFrontend.hooks.addAction('frontend/element_ready/xstudioapp_testimonials.default', function($scope){
+        elementorFrontend.hooks.addAction('frontend/element_ready/xstudioapp_blog.default', function($scope){
             xstudioapp_blog();
         });
     }
